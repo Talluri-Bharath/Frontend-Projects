@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multimedia Showcase</title>
+
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#c4cad5;
+    padding:30px;
+}
+
+.container{
+    width:900px;
+    margin:auto;
+    background:rgb(150, 170, 182);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0px 10px 30px rgba(0,0,0,.2);
+}
+
+/*================ HEADER ================*/
+
+.header{
+    background:linear-gradient(90deg,#2563EB,#4F46E5);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.header h1{
+    font-size:40px;
+    letter-spacing:2px;
+}
+
+.header p{
+    margin-top:10px;
+    color:#E0E7FF;
+    font-size:18px;
+}
+
+/*================ MARQUEE ================*/
+
+marquee{
+    padding:12px;
+    font-size:17px;
+    font-weight:bold;
+    color:#1E3A8A;
+}
+
+/*================ BANNER ================*/
+
+.banner{
+    padding:20px;
+}
+
+.banner img{
+    width:100%;
+    height:350px;
+  
+    border-radius:12px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.2);
+}
+
+/*================ COMMON SECTION ================*/
+
+.section{
+    padding:30px;
+    text-align:center;
+}
+
+.section h2{
+    color:#2563EB;
+    margin-bottom:12px;
+}
+
+.section p{
+    color:#555;
+    margin-bottom:20px;
+    line-height:25px;
+}
+
+/*================ VIDEO ================*/
+
+video{
+    width:100%;
+    height:420px;
+    border-radius:12px;
+    border:1px solid gray;
+    background:black;
+    box-shadow: 0px 10px 10px rgb(82, 78, 78);
+}
+
+/*================ AUDIO ================*/
+
+audio{
+    width:100%;
+}
+
+/*================ IFRAME ================*/
+
+iframe{
+    width:100%;
+    height:420px;
+    border:none;
+    border-radius:12px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.2);
+}
+
+/*================ FORMAT CARDS ================*/
+
+.formats{
+    display:flex;
+    justify-content:space-evenly;
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    width:45%;
+    background:#F8FAFC;
+    border:2px solid #BFDBFE;
+    border-radius:10px;
+    padding:20px;
+}
+
+.card h3{
+    color:#2563EB;
+    margin-bottom:15px;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card li{
+    padding:10px;
+    border-bottom:1px solid #D1D5DB;
+    color:#374151;
+    font-weight:bold;
+}
+
+
+/*================ ABOUT ================*/
+
+.about{
+    padding:30px;
+    text-align:center;
+}
+
+.about h2{
+    color:#2563EB;
+    margin-bottom:15px;
+}
+
+.about p{
+    color:#060505;
+    line-height:30px;
+    font-size:17px;
+}
+
+/*================ HR ================*/
+
+hr{
+    width:90%;
+    margin:20px auto;
+    border:1px solid #D1D5DB;
+}
+
+/*================ FOOTER ================*/
+
+.footer{
+    background:#2563EB;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:17px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= HEADER ================= -->
+
+<div class="header">
+
+<h1>🎬 Multimedia Showcase</h1>
+
+<p>Learn • Watch • Listen • Explore</p>
+
+</div>
+
+<!-- ================= MARQUEE ================= -->
+
+<marquee
+direction="left"
+scrollamount="8"
+behavior="scroll"
+bgcolor="#BFDBFE"
+loop="5">
+
+🎉 Welcome to our Multimedia Showcase Website | Learn HTML Video, Audio & Iframe Concepts Easily 🚀
+
+</marquee>
+
+<!-- ================= HERO IMAGE ================= -->
+
+<div class="banner">
+
+<img
+src="./images/MMedia.jpg"
+alt="Multimedia Banner">
+
+</div>
+
+<!-- ================= VIDEO SECTION ================= -->
+
+<div class="section">
+
+<h2>🎥 Featured Video</h2>
+
+<p>
+
+Watch the featured multimedia video below.
+
+</p>
+
+<video
+
+src="./videos/mixkit-waterfall-in-forest-2213-hd-ready.mp4"
+
+width="100%"
+
+height="420"
+
+controls
+
+</video>
+
+</div>
+
+<hr>
+
+<!-- ================= AUDIO SECTION ================= -->
+
+<div class="section">
+
+<h2>🎵 Featured Audio</h2>
+
+<p>
+
+Listen to our multimedia audio demonstration.
+
+</p>
+
+<audio
+
+src="./audio/Tujhe Kitna Chahein Aur (Film Version) - NaaSongs.mp3"
+
+controls>
+
+</audio>
+
+</div>
+
+<hr>
+
+<!-- ================= YOUTUBE SECTION ================= -->
+
+<div class="section">
+
+<h2>📺 Embedded YouTube Video</h2>
+
+<p>
+
+Watch our YouTube multimedia tutorial.
+
+</p>
+<iframe
+width="700"
+height="400"
+src="https://www.youtube.com/embed/M7lc1UVf-VE"
+title="YouTube video player"
+allowfullscreen>
+</iframe>
+
+
+
+</div>
+
+<hr>
+
+<!-- ================= FORMATS ================= -->
+
+<div class="formats">
+
+<div class="card">
+
+<h3>🎞 Supported Video Formats</h3>
+
+<ul>
+
+<li>.mp4</li>
+
+<li>.avi</li>
+
+<li>.ogg</li>
+
+<li>.webm</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>🎵 Supported Audio Formats</h3>
+
+<ul>
+
+<li>.mp3</li>
+
+<li>.wav</li>
+
+<li>.ogg</li>
+
+<li>.midi</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr>
+
+<!-- ================= ABOUT ================= -->
+
+<div class="about">
+
+<h2>📖 About Multimedia</h2>
+
+<p>
+
+HTML Multimedia allows us to display videos,
+play audio files, embed YouTube videos,
+and create interactive multimedia webpages.
+
+Modern HTML mainly uses the
+<strong>video</strong>,
+<strong>audio</strong>,
+and
+<strong>iframe</strong>
+elements for multimedia content.
+
+</p>
+
+</div>
+
+<hr>
+
+<!-- ================= FOOTER ================= -->
+
+<div class="footer">
+
+<p>
+
+© 2026 Multimedia Showcase Website
+
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
