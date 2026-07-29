@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Attachment Demo</title>
+
+   <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f5f5f5;
+}
+
+h1{
+
+    text-align:center;
+    
+    margin:30px;
+}
+
+section{
+
+    height:500px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    text-shadow:3px 3px 10px black;
+
+    background-image:url(./images/puppy-6.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
+
+/* Scroll */
+
+.scroll-bg{
+
+    background-attachment:scroll;
+}
+
+/* Fixed */
+
+.fixed-bg{
+
+    background-attachment:fixed;
+}
+
+.content{
+
+    padding:50px;
+
+    font-size:20px;
+
+    line-height:2;
+}
+
+/* Local */
+
+.title{
+
+    text-align:center;
+
+    margin:40px 0;
+}
+
+.local-box{
+
+    width:800px;
+
+    height:350px;
+
+    margin:30px auto;
+
+    overflow:auto;
+
+    padding:30px;
+
+    border:5px solid black;
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:2;
+
+    background-image:url(./images/puppy-6.jpg);
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-attachment:local;
+}
+   </style>
+</head>
+<body>
+
+<h1>CSS Background Attachment</h1>
+
+
+
+<section class="scroll-bg">
+
+    <h2>background-attachment: scroll</h2>
+
+</section>
+
+
+
+<div class="content">
+
+      <p>
+        The default value of <strong>background-attachment</strong> is
+        <strong>scroll</strong>. The background image moves together with the
+        page whenever the user scrolls.
+    </p>
+
+    <p>
+        Both the text and the background image scroll at the same speed.
+        The image always stays attached to the element itself.
+    </p>
+
+    <p>
+        This behaviour is commonly used for normal website sections where
+        no special scrolling effect is required.
+    </p>
+
+    <p>
+        Since this is the default behaviour, you usually don't need to
+        write <strong>background-attachment: scroll;</strong> unless you
+        want to make it explicit.
+    </p>
+</div>
+
+<section class="fixed-bg">
+
+    <h2>background-attachment: fixed</h2>
+
+</section>
+
+
+<div class="content">
+
+    
+    <p>
+        The <strong>background-attachment: fixed</strong> property keeps
+        the background image fixed relative to the browser window.
+    </p>
+
+    <p>
+        When the user scrolls the page, the content moves, but the
+        background image remains in the same position, creating a
+        parallax-like scrolling effect.
+    </p>
+
+    <p>
+        This effect is commonly used in landing pages, travel websites,
+        portfolios, and modern UI designs to make sections more attractive.
+    </p>
+
+    <p>
+        Be careful while using fixed backgrounds because some mobile
+        browsers may not fully support this behaviour.
+    </p>
+</div>
+
+<!-- Section 3 -->
+
+<h2 class="title">background-attachment: local</h2>
+
+<div class="local-box">
+
+    
+    <p>
+        The <strong>background-attachment: local</strong> property makes
+        the background image scroll together with the content inside this
+        container.
+    </p>
+
+    <p>
+        This property works only when the element has its own scrolling
+        area using <strong>overflow: auto</strong> or
+        <strong>overflow: scroll</strong>.
+    </p>
+
+    <p>
+        As you scroll inside this box, both the text and the background
+        image move together.
+    </p>
+
+    <p>
+        Unlike <strong>fixed</strong>, the image is not attached to the
+        browser window. Unlike <strong>scroll</strong>, it responds only
+        to the scrolling inside this container.
+    </p>
+
+    <p>
+        Local backgrounds are useful for scrollable cards, chat windows,
+        documentation panels, and other containers with internal scrolling.
+    </p>
+
+    <p>
+        Keep scrolling inside this box to clearly observe how the
+        background moves along with the content.
+    </p>
+
+    <p>
+        This behaviour provides a better user experience when a section
+        contains a large amount of content inside a fixed-height container.
+    </p>
+
+    <p>
+        Try comparing all three values — <strong>scroll</strong>,
+        <strong>fixed</strong>, and <strong>local</strong> — to understand
+        the difference in background movement.
+    </p>
+
+</div>
+
+</body>
+</html>
