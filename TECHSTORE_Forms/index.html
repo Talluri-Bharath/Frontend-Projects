@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Vendor Registration</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#e6f0ff;
+        }
+
+        .container{
+            width:450px;
+            background:white;
+            margin:40px auto;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        h1{
+            text-align:center;
+            color:#0b63ce;
+            margin-bottom:10px;
+        }
+
+        h3{
+            text-align:center;
+            color:gray;
+            margin-bottom:25px;
+        }
+
+        p{
+            margin-top:15px;
+            margin-bottom:6px;
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            border:1px solid gray;
+            border-radius:5px;
+            font-size:15px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:25px;
+            background:#0b63ce;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>TECHSTORE</h1>
+        <h3>Vendor Registration Portal</h3>
+
+        <form action="./register.jsp" method="post" novalidate>
+
+            <p>Vendor Name</p>
+
+            <input
+                type="text"
+                name="vendorName"
+                placeholder="Enter Vendor Name"
+                minlength="4"
+                maxlength="30"
+                required
+                autofocus>
+
+            <p>Password</p>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                minlength="6"
+                maxlength="15"
+                required>
+
+            <p>Business Email</p>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Business Email"
+                required>
+
+            <p>Company Website</p>
+
+            <input
+                type="url"
+                name="website"
+                placeholder="https://example.com">
+
+            <p>Search Products</p>
+
+            <input
+                type="text"
+                name="search"
+                list="products"
+                placeholder="Search Products">
+
+            <datalist id="products">
+                <option>Mobiles</option>
+                <option>Laptops</option>
+                <option>Headphones</option>
+                <option>Gaming</option>
+                <option>Accessories</option>
+            </datalist>
+
+            <p>Quantity</p>
+
+            <input
+                type="text"
+                name="qty"
+                value="1"
+                size="4">
+
+            <p>Vendor ID</p>
+
+            <input
+                type="text"
+                name="vendorId"
+                value="TV1024"
+                readonly>
+
+            <p>GST Number</p>
+
+            <input
+                type="text"
+                name="gst"
+                value="29ABCDE1234F1Z5"
+                disabled>
+
+            <button>Register Vendor</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
