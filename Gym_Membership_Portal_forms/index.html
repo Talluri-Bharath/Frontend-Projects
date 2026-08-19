@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Membership Portal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F5F7FA;
+}
+
+.container{
+    background:#FFFFFF;
+}
+
+h1{
+    color:#1F2937;
+}
+
+label{
+    color:#374151;
+}
+
+input,
+select,
+textarea{
+    background:#F9FAFB;
+    border:1px solid #D1D5DB;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2563EB;
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+}
+
+.submit{
+    background:#2563EB;
+}
+
+.reset{
+    background:#EF4444;
+}
+
+
+
+.container{
+    width:500px;
+    margin:30px auto;
+  
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px gray;
+}
+
+h1{
+    text-align:center;
+
+    margin-bottom:20px;
+}
+
+img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow: 0px 10px 5px rgb(77, 75, 75);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    font-size:15px;
+}
+
+
+
+.gender,
+.goals{
+    margin-top:8px;
+}
+
+.go, .gender{
+    display:flex;
+    gap: 20px;
+    margin-right:15px;
+    font-weight:normal;
+}
+
+.gender input,
+.goals input{
+    width:auto;
+}
+
+meter,
+progress{
+    width:100%;
+    height:20px;
+    margin-top:8px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    font-size:17px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.submit{
+    
+    color:black;
+}
+
+.reset{
+
+    color:white;
+}
+
+hr{
+    margin:25px 0;
+}
+
+p{
+    text-align:center;
+    color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏋️ Gym Membership Portal</h1>
+
+<img src="./images/Gym.jpg" alt="Gym">
+
+<form action="./register.jsp" method="post">
+
+<label>Member Name</label>
+
+<input
+type="text"
+placeholder="Enter Member Name"
+pattern="^[A-Z][a-z]{3,15}$"
+required
+autofocus>
+
+<label>Password</label>
+
+<input
+type="text"
+placeholder="Enter Password"
+pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[\W])[\w\W]{8,15}"
+required>
+
+<label>Gender</label>
+
+<div class="gender">
+
+<label>
+<input
+type="radio"
+name="gender"
+value="Male"
+checked>
+Male
+</label>
+
+<label>
+<input
+type="radio"
+name="gender"
+value="Female">
+Female
+</label>
+
+<label>
+<input
+type="radio"
+name="gender"
+value="Other">
+Other
+</label>
+
+</div>
+
+<label>Fitness Goals</label>
+
+<div class="goals">
+
+<div class="go">
+    <label>
+<input
+type="checkbox"
+name="goal"
+value="Weight Loss">
+Weight Loss
+</label>
+
+<label>
+<input
+type="checkbox"
+name="goal"
+value="Muscle Gain">
+Muscle Gain
+</label>
+</div>
+
+<br>
+
+<div class="go">
+    <label>
+<input
+type="checkbox"
+name="goal"
+value="Strength">
+Strength
+</label>
+
+<label>
+<input
+type="checkbox"
+name="goal"
+value="Cardio">
+Cardio
+</label>
+</div>
+
+</div>
+
+<label>Membership Plan</label>
+
+<select>
+
+<option>Select Plan</option>
+
+<option>Monthly</option>
+
+<option>Quarterly</option>
+
+<option>Yearly</option>
+
+</select>
+
+
+<label>Joining Date</label>
+
+<input
+type="date">
+
+<label>Workout Time</label>
+
+<input
+type="time">
+
+<label>Theme Color</label>
+
+<input
+type="color"
+value="#16A34A">
+
+<label>Upload Medical Report</label>
+
+<input
+type="file"
+accept=".jpg,.png,.pdf">
+
+<label>Health Notes</label>
+
+<textarea
+rows="5"
+placeholder="Enter your health details..."></textarea>
+
+<label>BMI Meter</label>
+
+<meter
+min="10"
+max="40"
+value="24"
+low="18"
+high="30">
+</meter>
+
+<label>Registration Progress</label>
+
+<progress
+max="100"
+value="70">
+</progress>
+
+<hr>
+
+<button
+type="submit"
+class="submit">
+
+Join Now
+
+</button>
+
+<button
+type="reset"
+class="reset">
+
+Reset
+
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
