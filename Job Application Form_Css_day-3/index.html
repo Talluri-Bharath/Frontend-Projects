@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+   <style>
+  
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+:root{
+
+    --primary:#DC2626;
+    --secondary:#1F2937;
+    --success:#22C55E;
+    --danger:#B91C1C;
+    --white:#FFFFFF;
+    --border:#4B5563;
+    --text:#040404;
+
+}
+
+
+body{
+
+    background:var(--secondary);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+
+
+.container{
+
+    width:600px;
+
+    background:var(--white);
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+
+h1{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+
+
+label{
+
+    display:block;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+    color:var(--text);
+
+}
+
+
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--border);
+
+    border-radius:6px;
+
+    font-size:1rem;
+
+}
+
+input[type="file"]{
+
+    padding:8px;
+
+}
+
+
+input[type="checkbox"]{
+
+    width:auto;
+
+    margin-right:6px;
+
+}
+
+input[type="checkbox"] + label{
+
+    display:inline;
+
+    margin-right:20px;
+
+}
+
+
+
+#declaration{
+
+    width:auto;
+
+}
+
+#declaration + label{
+
+    display:inline;
+
+    margin-left:5px;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+}
+
+
+input::placeholder{
+
+    color:gray;
+
+    font-style:italic;
+
+}
+textarea::placeholder
+{
+ color:gray;
+
+    font-style:italic;
+}
+
+
+
+button:hover{
+
+    background:var(--success);
+
+}
+
+
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border:2px solid var(--primary);
+
+    box-shadow:0 0 5px lightblue;
+
+}
+
+
+
+input:read-only{
+
+    background:#E5E7EB;
+
+    cursor:not-allowed;
+
+}
+
+
+input:required{
+
+    border-left:4px solid orange;
+
+}
+
+
+input:valid{
+
+    border-color:green;
+
+}
+
+
+
+input:invalid{
+
+    border-color:red;
+
+}
+
+
+
+input[type="number"]:in-range{
+
+    background:#DCFCE7;
+
+}
+
+
+
+input[type="number"]:out-of-range{
+
+    background:#FECACA;
+
+}
+
+input[type="checkbox"]:checked{
+
+    accent-color:green;
+
+}
+
+#declaration:checked + label{
+
+    color:green;
+
+}
+   </style>
+</head>
+<body>
+  
+
+<div class="container">
+
+    <h1>Job Application Form</h1>
+
+    <form>
+
+        <!-- Application ID -->
+        <div class="form-group">
+            <label for="appid">Application ID</label>
+            <input
+                type="text"
+                id="appid"
+                value="APP2026001"
+                readonly>
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+                type="text"
+                id="fullname"
+                placeholder="Enter Full Name"
+                required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email Address"
+                required>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter Mobile Number"
+                pattern="[0-9]{10}"
+                required>
+        </div>
+
+        <!-- Experience -->
+        <div class="form-group">
+            <label for="experience">Experience (Years)</label>
+            <input
+                type="number"
+                id="experience"
+                min="0"
+                max="20"
+                placeholder="Enter Experience"
+                required>
+        </div>
+
+        <!-- Expected Salary -->
+        <div class="form-group">
+            <label for="salary">Expected Salary</label>
+            <input
+                type="number"
+                id="salary"
+                min="10000"
+                max="100000"
+                placeholder="Enter Expected Salary"
+                required>
+        </div>
+
+        <!-- Resume Upload -->
+        <div class="form-group">
+            <label for="resume">Upload Resume</label>
+            <input
+                type="file"
+                id="resume"
+                required>
+        </div>
+
+        <!-- Skills -->
+        <div class="form-group">
+
+            <label>Skills</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript">
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="java">
+            <label for="java">Java</label>
+
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+            <label for="address">Address</label>
+
+            <textarea
+                id="address"
+                rows="4"
+                placeholder="Enter Your Address"></textarea>
+        </div>
+
+        <!-- Declaration -->
+        <div class="form-group">
+
+            <input
+                type="checkbox"
+                id="declaration"
+                required>
+
+            <label for="declaration">
+                I Accept the Declaration
+            </label>
+
+        </div>
+
+        <!-- Apply Button -->
+        <div class="form-group">
+            <button type="submit">
+                Apply
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
